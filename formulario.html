@@ -34,11 +34,19 @@
         }
 
         input[type="text"], input[type="email"], input[type="tel"] {
-            width: 95%; /* Ajuste aqui a largura das caixas */
+            width: 95%; /* ajustando a largura da caixinha de formulário*/
             padding: 8px;
             margin-bottom: 15px;
             border: 1px solid #CCC;
             border-radius: 4px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: center; /* centralizando o conteúdo horizontalmente */
+            align-items: center; /* alinhando verticalmente */
+            gap: 10px; /* espaço entre o botão e o link */
+            margin-top: 20px;
         }
 
         input[type="submit"] {
@@ -53,6 +61,17 @@
 
         input[type="submit"]:hover {
             background-color: #455A64;
+        }
+
+        .back-link a {
+            color: #2F4F4F;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 40px; /* alinhando link verticalmente com o botão */
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -70,7 +89,10 @@
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
 
-        <input type="submit" value="Enviar">
+        <div class="form-actions">
+            <input type="submit" value="Enviar">
+            <a href="javascript:history.back()">Voltar</a>
+        </div>
     </form>
 
 </body>
